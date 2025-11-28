@@ -6,7 +6,7 @@ from app.config import EURI_API_KEY, OPENWEATHER_API_KEY
 
 # Page config
 st.set_page_config(
-    page_title="🌱 AgroBot - Farmer Assistant",
+    page_title="🌱 Farm Mate - Farmer Assistant",
     page_icon="🌾",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -29,7 +29,7 @@ if "chat_model" not in st.session_state:
 # Header
 st.markdown("""
 <div style="text-align:center; padding:1.5rem;">
-    <h1 style="color:#2e7d32;">🌱 AgroBot</h1>
+    <h1 style="color:#2e7d32;">🌱 Farm Mate </h1>
     <p>Your Intelligent Farming Assistant 🌾</p>
 </div>
 """, unsafe_allow_html=True)
@@ -70,14 +70,14 @@ with st.sidebar:
                 st.error("⚠️ Could not fetch weather. Please check city name or API key.")
 
 # Display chat
-st.markdown("### 💬 Chat with AgroBot")
+st.markdown("### 💬 Chat with Farm Mate ")
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
         st.caption(message["timestamp"])
 
 # Chat input
-if prompt := st.chat_input("Ask AgroBot about crops, weather, or farming..."):
+if prompt := st.chat_input("Ask Farm Mate  about crops, weather, or farming..."):
     timestamp = time.strftime("%H:%M")
     st.session_state.messages.append({"role": "user", "content": prompt, "timestamp": timestamp})
     with st.chat_message("user"):
@@ -95,7 +95,7 @@ if prompt := st.chat_input("Ask AgroBot about crops, weather, or farming..."):
                 """
             
             system_prompt = f"""
-            You are AgroBot, a friendly farming assistant for Indian farmers.
+            You are Farm Mate , a friendly farming assistant for Indian farmers.
             Crop selected: {crop_choice}.
             Use weather info if available.
 
