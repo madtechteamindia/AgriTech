@@ -113,4 +113,4 @@ if prompt := st.chat_input("Ask Farm Mate  about crops, weather, or farming...")
 
 # Footer
 st.markdown("---")
-st.markdown("<div style='text-align:center; color:#666;'>🤖 Powered by Farm Mate | 🌱 Helping Farmers Grow Better</div>", unsafe_allow_html=True)
+st.markdown("<div style='text-align:center; color:#666;'>🤖 Powered by FarmMate MADTECCH Team| 🌱 Helping Farmers Grow Better</div>", unsafe_allow_html=True)
